@@ -1,4 +1,4 @@
-enum DarkOrBrightSpecified {
+﻿enum DarkOrBrightSpecified {
     //% block="暗い"
     IS_DARK,
     //% block="明るい"
@@ -97,7 +97,7 @@ namespace proguru {
      */
     //% blockId=brightness_determination block="%lightThreshold より %settingDarkOrBright"
     //% lightThreshold.min=0 lightThreshold.max=255
-    export function brightnessDetermination(lightThreshold: number = 30, settingDarkOrBright: DarkOrBrightSpecified): boolean {
+    export function brightnessDetermination(lightThreshold: number, settingDarkOrBright: DarkOrBrightSpecified): boolean {
         if (_HYSTERESIS < 0) { control.assert(false); }
         if (lightThreshold < 0) {
             lightThreshold = 0;
